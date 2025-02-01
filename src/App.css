@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* carousel */
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .list {
+  display: flex;
+  transition: transform 1s ease-in-out; /* smooth transition */
+}
+
+.carousel .list .item {
+  width: 100vw; /* Ensures each item takes up full screen */
+  height: 100vh;
+  position: absolute;
+  
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth fade transition */
+  z-index: 100;
+}
+
+.carousel .list .item.active {
+  opacity: 1; /* Only the active item is visible */
+}
+
+.carousel .list .item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 400px;
+  text-align: left;
+  color: #fff;
+  display: block; /* Ensure content is visible */
+}
+
+.content .title {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #14ff72cb;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.content .name {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 2px 3px 3px rgba(255, 255, 255, 0.8);
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.content .btn {
+  margin-left: 5px;
+}
+
+.content .btn button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1) {
+  margin-right: 15px;
+}
+
+.content .btn button:nth-child(2) {
+  background: transparent;
+  color: #14ff72cb;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover {
+  background-color: #14ff72cb;
+  color: #fff;
+  border-color: #14ff72cb;
+}
+
+/* next prev arrows */
+
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.arrows button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #14ff72cb;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.arrows button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* time running */
+.carousel .timeRunning {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 4px;
+  background-color: #14ff72cb;
+  left: 0;
+  top: 0;
+  animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+.fixed-btn {
+  position: fixed;
+  top: 20px; /* Distance from bottom */
+  right: 20px;  /* Distance from right */
+  z-index: 100;
+}
+
+.fixed-btn button {
+  padding: 10px 20px;
+  background-color: #000000cb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: 2px solid cyan;
+}
+
+.fixed-btn button:hover {
+  background-color: #12cc60;
+}
+
+@media screen and (max-width: 999px){
+    
+  
+
+  .list .item .content{
+      left: 50px;
+  }
+
+  .content .title, .content .name{
+      font-size: 70px;
+  }
+
+  .content .des{
+      font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 690px){
+  
+
+  .list .item .content{
+      top: 40%;
+  }
+
+  .content .title, .content .name{
+      font-size: 45px;
+  }
+
+  .content .btn button{
+      padding: 10px 15px;
+      font-size: 14px;
+  }
+}

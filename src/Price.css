@@ -1,0 +1,141 @@
+/* styles.css */
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+   
+}
+
+.container.dark-mode {
+    background-color: #1e1e1e;
+    color: #eaeaea;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Enhanced Dark Mode Toggle Button Style */
+
+/* Dark Mode Table Row Styling */
+.container.dark-mode {
+    background-color: #333;
+    color: #eaeaea;
+}
+
+.container.dark-mode .table {
+    color: #eaeaea;
+}
+
+.container.dark-mode .table-striped tbody tr:nth-child(odd) {
+    background-color: #444;
+}
+
+.container.dark-mode .table-bordered th, .container.dark-mode .table-bordered td {
+    border: 1px solid #666;
+}
+
+/* Icon Styling */
+button svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Dark Mode Button Style */
+.container.dark-mode button {
+    color: #eaeaea;
+    border-color: #eaeaea;
+    
+}
+
+.container.dark-mode button:hover {
+    background-color: #495057;
+    color: #eaeaea;
+    border-color: #495057;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+}
+
+td {
+    font-size: 1rem;
+}
+
+.dark-row {
+    background-color: #2a2a2a;
+}
+
+img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+td, th {
+    font-size: 1rem;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+button {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Dark mode styles */
+.container.dark-mode table {
+    background-color: #1a1a1a;
+}
+
+.container.dark-mode th {
+    background-color: #007bff;
+}
+
+.container.dark-mode td {
+    color: #eaeaea;
+}
+
+.container.dark-mode button {
+    background-color: #343a40;
+    color: #eaeaea;
+}
+
+.container.dark-mode button:hover {
+    background-color: #495057;
+}
